@@ -5,10 +5,11 @@ import { Header } from '@/components/header/Header';
 import { HeroSection } from '@/components/hero/HeroSection';
 import { PricingSection } from '@/components/pricing-section/PricingSection';
 import { FAQSection } from '@/components/accordion/FAQSection';
+import { Footer } from '@/components/footer/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col">
       <Header 
         onSignIn={() => alert('Sign in clicked!')}
         onRegister={() => alert('Register clicked!')}
@@ -75,8 +76,18 @@ export default function Home() {
               <p className="text-gray-600">Expandable FAQ items with open/closed states</p>
             </div>
           </Link>
+          
+          {/* Footer */}
+          <Link href="/footer-test" className="block">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">Footer</h3>
+              <p className="text-gray-600">Site footer with links and copyright</p>
+            </div>
+          </Link>
         </div>
       </main>
+      
+      <Footer />
     </div>
   );
 }
