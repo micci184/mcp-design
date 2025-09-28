@@ -53,6 +53,14 @@ export default function Home() {
               <p className="text-gray-600">Pricing cards with Stroke and Brand variants</p>
             </div>
           </Link>
+          
+          {/* Pricing Section */}
+          <Link href="/pricing-section-test" className="block">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">Pricing Section</h3>
+              <p className="text-gray-600">Complete pricing section with toggle and cards</p>
+            </div>
+          </Link>
         </div>
       </main>
     </div>
