@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Twitter, Youtube, Instagram, Facebook } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface FooterLink {
@@ -90,40 +89,60 @@ export const Footer: React.FC<FooterProps> = ({
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <Link
-                href="https://twitter.com"
+                href="https://x.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#1E1E1E] hover:text-[#757575] transition-colors"
-                aria-label="Twitter"
+                className="hover:opacity-70 transition-opacity"
+                aria-label="X (Twitter)"
               >
-                <Twitter size={24} />
-              </Link>
-              <Link
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1E1E1E] hover:text-[#757575] transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={24} />
+                <Image
+                  src="/icons/x-logo.svg"
+                  alt="X Logo"
+                  width={24}
+                  height={24}
+                />
               </Link>
               <Link
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#1E1E1E] hover:text-[#757575] transition-colors"
+                className="hover:opacity-70 transition-opacity"
                 aria-label="Instagram"
               >
-                <Instagram size={24} />
+                <Image
+                  src="/icons/instagram-logo.svg"
+                  alt="Instagram Logo"
+                  width={24}
+                  height={24}
+                />
               </Link>
               <Link
-                href="https://facebook.com"
+                href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#1E1E1E] hover:text-[#757575] transition-colors"
-                aria-label="Facebook"
+                className="hover:opacity-70 transition-opacity"
+                aria-label="YouTube"
               >
-                <Facebook size={24} />
+                <Image
+                  src="/icons/youtube-logo.svg"
+                  alt="YouTube Logo"
+                  width={24}
+                  height={24}
+                />
+              </Link>
+              <Link
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70 transition-opacity"
+                aria-label="LinkedIn"
+              >
+                <Image
+                  src="/icons/linkedin-logo.svg"
+                  alt="LinkedIn Logo"
+                  width={24}
+                  height={24}
+                />
               </Link>
             </div>
             
