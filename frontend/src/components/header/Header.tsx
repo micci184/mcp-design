@@ -39,6 +39,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center">
               <div className="w-10 h-10 flex items-center justify-center">
+                {/* Figma Logo Icon */}
                 <svg
                   width="24"
                   height="35"
@@ -78,12 +79,11 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Auth Buttons */}
           {!isAuthenticated && (
-            <div className="flex gap-3 w-[178px]">
+            <div className="flex gap-3">
               <Button
                 variant="neutral"
                 size="small"
                 onClick={onSignIn}
-                className="flex-1"
               >
                 Sign in
               </Button>
@@ -91,7 +91,6 @@ export const Header: React.FC<HeaderProps> = ({
                 variant="primary"
                 size="small"
                 onClick={onRegister}
-                className="flex-1"
               >
                 Register
               </Button>
