@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Header } from '@/components/header/Header';
 import { HeroSection } from '@/components/hero/HeroSection';
+import { PricingSection } from '@/components/pricing-section/PricingSection';
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
         subtitle="Everything you need to build your next project"
         align="center"
       />
+      
+      <PricingSection />
       
       <main className="max-w-[1200px] mx-auto px-8 py-12">
         <h2 className="text-2xl font-bold mb-8 text-center">Component Library</h2>

@@ -16,7 +16,7 @@ export default function PricingSectionTest() {
           <div className="bg-white rounded-lg shadow-sm p-6">
             <h2 className="text-xl font-semibold mb-4">Component Features</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>Navigation Pills: Monthly/Yearly toggle + Compare Plans link</li>
+              <li>Navigation Pills: Monthly/Yearly toggle + Link</li>
               <li>Three pricing cards with different variants</li>
               <li>Dynamic price switching between Monthly and Yearly</li>
               <li>Responsive grid layout (1 column on mobile, 3 on desktop)</li>

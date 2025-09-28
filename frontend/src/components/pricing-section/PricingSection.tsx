@@ -71,7 +71,7 @@ const defaultPlans: PricingPlan[] = [
 const navigationItems: PillItem[] = [
   { id: 'monthly', label: 'Monthly' },
   { id: 'yearly', label: 'Yearly' },
-  { id: 'link', label: 'Compare Plans', href: '/compare-plans' },
+  { id: 'link', label: 'Link', href: '#' },
 ];
 
 export const PricingSection: React.FC<PricingSectionProps> = ({
