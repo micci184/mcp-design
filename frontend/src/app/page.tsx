@@ -17,13 +17,9 @@ export default function Home() {
       
       {/* Hero Section */}
       <HeroSection
-        title="Simple Design System"
-        subtitle="Everything you need to build your next project"
-        ctaText="Get Started"
-        secondaryCtaText="Learn More"
+        title="Title"
+        subtitle="Subtitle"
         align={alignment}
-        onCtaClick={() => alert('Get Started clicked!')}
-        onSecondaryCtaClick={() => alert('Learn More clicked!')}
       />
       
       {/* Test Controls */}
