@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/button/Button';
 import { cn } from '@/lib/utils';
 
@@ -39,20 +40,13 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center">
               <div className="w-10 h-10 flex items-center justify-center">
-                {/* Figma Logo Icon */}
-                <svg
-                  width="24"
-                  height="35"
-                  viewBox="0 0 24 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.5 0.5L0.5 5.5V29.5L5.5 34.5H18.5L23.5 29.5V5.5L18.5 0.5H5.5Z"
-                    stroke="#1E1E1E"
-                    strokeWidth="3.5"
-                  />
-                </svg>
+                <Image
+                  src="/figma-logo.svg"
+                  alt="Figma Logo"
+                  width={40}
+                  height={40}
+                  priority
+                />
               </div>
             </Link>
           </div>
