@@ -1,84 +1,58 @@
 'use client';
 
-import { PricingCard } from '@/components/pricing-card/PricingCard';
+import Link from 'next/link';
+import { Header } from '@/components/header/Header';
+import { HeroSection } from '@/components/hero/HeroSection';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <main className="max-w-[1200px] mx-auto px-8">
-        <h1 className="text-3xl font-bold mb-8 text-center">Pricing Card Component Test</h1>
+    <div className="min-h-screen bg-white">
+      <Header 
+        onSignIn={() => alert('Sign in clicked!')}
+        onRegister={() => alert('Register clicked!')}
+      />
+      
+      <HeroSection
+        title="Simple Design System"
+        subtitle="Everything you need to build your next project"
+        align="center"
+      />
+      
+      <main className="max-w-[1200px] mx-auto px-8 py-12">
+        <h2 className="text-2xl font-bold mb-8 text-center">Component Library</h2>
         
-        {/* Pricing Cards Grid */}
-        <div className="flex flex-wrap justify-center gap-8 mb-12">
-          {/* Stroke Variant */}
-          <PricingCard
-            title="Basic Plan"
-            price="29"
-            currency="$"
-            period="/ mo"
-            features={[
-              '5 Projects',
-              '10 GB Storage',
-              'Basic Support',
-              'API Access',
-              'Custom Domain',
-            ]}
-            buttonText="Get Started"
-            variant="stroke"
-            onButtonClick={() => alert('Basic Plan selected!')}
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Button Component */}
+          <Link href="/button-test" className="block">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">Button</h3>
+              <p className="text-gray-600">Primary and Neutral variants with different sizes and states</p>
+            </div>
+          </Link>
           
-          {/* Brand Variant */}
-          <PricingCard
-            title="Pro Plan"
-            price="50"
-            currency="$"
-            period="/ mo"
-            features={[
-              'Unlimited Projects',
-              '100 GB Storage',
-              'Priority Support',
-              'Advanced API Access',
-              'Multiple Custom Domains',
-            ]}
-            buttonText="Get Started"
-            variant="brand"
-            onButtonClick={() => alert('Pro Plan selected!')}
-          />
+          {/* Header Component */}
+          <Link href="/header-test" className="block">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">Header</h3>
+              <p className="text-gray-600">Navigation header with logo and authentication buttons</p>
+            </div>
+          </Link>
           
-          {/* Another Stroke Variant */}
-          <PricingCard
-            title="Enterprise"
-            price="99"
-            currency="$"
-            period="/ mo"
-            features={[
-              'Everything in Pro',
-              'Unlimited Storage',
-              'Dedicated Support',
-              'Custom Integrations',
-              'SLA Guarantee',
-            ]}
-            buttonText="Contact Sales"
-            variant="stroke"
-            onButtonClick={() => alert('Enterprise Plan selected!')}
-          />
-        </div>
-        
-        {/* Component Features */}
-        <div className="bg-white rounded-lg shadow-sm p-6">
-          <h2 className="text-xl font-semibold mb-4">Component Features</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Two variants: Stroke (white background) and Brand (dark background)</li>
-            <li>Title: 24px, Semi-bold, Inter font</li>
-            <li>Price: 48px for number, 24px for currency</li>
-            <li>Features list with 5 items</li>
-            <li>CTA button at bottom</li>
-            <li>Width: 300px fixed</li>
-            <li>Padding: 32px</li>
-            <li>Border radius: 8px</li>
-            <li>Figma design compliant</li>
-          </ul>
+          {/* Hero Section */}
+          <Link href="/hero-test" className="block">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">Hero Section</h3>
+              <p className="text-gray-600">Hero section with title, subtitle, and alignment options</p>
+            </div>
+          </Link>
+          
+          {/* Pricing Card */}
+          <Link href="/pricing-card-test" className="block">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">Pricing Card</h3>
+              <p className="text-gray-600">Pricing cards with Stroke and Brand variants</p>
+            </div>
+          </Link>
         </div>
       </main>
     </div>
