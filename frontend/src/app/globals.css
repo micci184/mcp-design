@@ -1,29 +1,31 @@
 @import "tailwindcss";
 
-@theme {
-  /* Brand Colors */
-  --color-brand-default: #4338CA; /* Brand.800 */
-  --color-brand-hover: #312E81; /* Brand.900 */
-  --color-brand-secondary: #A5B4FC; /* Brand.200 */
-  --color-on-brand: #FFFFFF; /* White.1000 */
-  --color-on-brand-secondary: #312E81; /* Brand.900 */
+@layer base {
+  :root {
+    /* Brand Colors */
+    --color-brand-default: #4338CA;
+    --color-brand-hover: #312E81;
+    --color-brand-secondary: #A5B4FC;
+    --color-on-brand: #FFFFFF;
+    --color-on-brand-secondary: #312E81;
 
-  /* Neutral Colors */
-  --color-neutral-default: #18181B; /* Slate.900 */
-  --color-neutral-secondary: #E2E8F0; /* Slate.300 */
-  --color-neutral-secondary-hover: #CBD5E1; /* Slate.400 */
-  --color-neutral-tertiary: #475569; /* Slate.600 */
+    /* Neutral Colors */
+    --color-neutral-default: #18181B;
+    --color-neutral-secondary: #E2E8F0;
+    --color-neutral-secondary-hover: #CBD5E1;
+    --color-neutral-tertiary: #475569;
 
-  /* Typography */
-  --font-size-body-strong: 16px;
-  --font-weight-body-strong: 600; /* Semi Bold */
-  --line-height-body-strong: 1.4;
+    /* Typography */
+    --font-size-body-strong: 16px;
+    --font-weight-body-strong: 600;
+    --line-height-body-strong: 1.4;
 
-  --font-size-body-small-strong: 14px;
-  --font-weight-body-small-strong: 600; /* Semi Bold */
-  --line-height-body-small-strong: 1.4;
+    --font-size-body-small-strong: 14px;
+    --font-weight-body-small-strong: 600;
+    --line-height-body-small-strong: 1.4;
 
-  /* Sizing */
-  --border-radius-lg: 8px;
+    /* Sizing */
+    --border-radius-lg: 8px;
+  }
 }
 
