@@ -1,5 +1,6 @@
 'use client';
 
+import { Header } from '@/components/header/Header';
 import { HeroSection } from '@/components/hero/HeroSection';
 import { useState } from 'react';
 
@@ -8,10 +9,16 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Header */}
+      <Header 
+        onSignIn={() => alert('Sign in clicked!')}
+        onRegister={() => alert('Register clicked!')}
+      />
+      
       {/* Hero Section */}
       <HeroSection
-        title="Build Amazing Products"
-        subtitle="Create beautiful, modern applications with our design system"
+        title="Simple Design System"
+        subtitle="Everything you need to build your next project"
         ctaText="Get Started"
         secondaryCtaText="Learn More"
         align={alignment}
