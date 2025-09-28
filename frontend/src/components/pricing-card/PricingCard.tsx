@@ -56,21 +56,23 @@ export const PricingCard: React.FC<PricingCardProps> = ({
         </h3>
 
         {/* Price */}
-        <div className="flex items-end">
+        <div className="flex items-end justify-center">
+          <div className="flex items-start">
+            <span className={cn(
+              'text-2xl font-bold tracking-[-0.02em] leading-none mt-2',
+              textColor
+            )}>
+              {currency}
+            </span>
+            <span className={cn(
+              'text-5xl font-bold tracking-[-0.02em] leading-none',
+              textColor
+            )}>
+              {price}
+            </span>
+          </div>
           <span className={cn(
-            'text-2xl font-bold tracking-[-0.02em]',
-            textColor
-          )}>
-            {currency}
-          </span>
-          <span className={cn(
-            'text-5xl font-bold tracking-[-0.02em]',
-            textColor
-          )}>
-            {price}
-          </span>
-          <span className={cn(
-            'text-sm ml-1',
+            'text-sm ml-1 mb-1',
             variant === 'brand' ? 'text-[#F5F5F5]' : 'text-[#1E1E1E]'
           )}>
             {period}
@@ -78,16 +80,17 @@ export const PricingCard: React.FC<PricingCardProps> = ({
         </div>
 
         {/* Features List */}
-        <ul className="flex flex-col gap-3 self-stretch">
+        <ul className="flex flex-col gap-3 self-stretch list-none">
           {features.map((feature, index) => (
             <li
               key={index}
               className={cn(
-                'text-base',
+                'text-base flex items-start',
                 featureTextColor
               )}
             >
-              {feature}
+              <span className="mr-2">・</span>
+              <span>{feature}</span>
             </li>
           ))}
         </ul>

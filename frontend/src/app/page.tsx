@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Header } from '@/components/header/Header';
 import { HeroSection } from '@/components/hero/HeroSection';
+import { PricingSection } from '@/components/pricing-section/PricingSection';
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
         subtitle="Everything you need to build your next project"
         align="center"
       />
+      
+      <PricingSection />
       
       <main className="max-w-[1200px] mx-auto px-8 py-12">
         <h2 className="text-2xl font-bold mb-8 text-center">Component Library</h2>
@@ -51,6 +54,14 @@ export default function Home() {
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Pricing Card</h3>
               <p className="text-gray-600">Pricing cards with Stroke and Brand variants</p>
+            </div>
+          </Link>
+          
+          {/* Pricing Section */}
+          <Link href="/pricing-section-test" className="block">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">Pricing Section</h3>
+              <p className="text-gray-600">Complete pricing section with toggle and cards</p>
             </div>
           </Link>
         </div>
