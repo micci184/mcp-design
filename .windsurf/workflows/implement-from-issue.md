@@ -17,6 +17,7 @@ auto_execution_mode: 1
 - tokens.json が frontend ディレクトリに存在
 - Next.js プロジェクトがセットアップ済み
 - Git がセットアップ済み
+- .windsurf/rules/ を必ず確認する
 
 ### ステップ:
 
@@ -28,27 +29,35 @@ auto_execution_mode: 1
    - 選択された issue の詳細を取得
    - issue のステータスを「status:in-progress」に更新
 
-2. **ブランチ作成**
+2. **技術スタック確認**
+
+   - package.json を読み込み
+   - バージョンを確認：
+     - Tailwind CSS: v4 系か確認
+     - Next.js: バージョン確認
+   - 適切な設定方法を選択
+
+3. **ブランチ作成**
 
    - main ブランチから最新を取得
    - issue 番号とタイトルからブランチ名を生成
    - 例: feat/issue-2-button-component
    - ブランチ作成を issue にコメント
 
-3. **Figma デザイン詳細取得**
+4. **Figma デザイン詳細取得**
 
    - issue に記載された Figma リンクから情報取得
    - Figma MCP でコンポーネントの詳細を分析
    - サイズ、カラー、スペーシング、タイポグラフィを抽出
    - Variants は目視確認で補完
 
-4. **トークンマッピング確認**
+5. **トークンマッピング確認**
 
    - frontend/tokens.json を読み込み
    - Figma から抽出した値とトークンをマッピング
    - マッピングできない値を警告表示
 
-5. **コンポーネント実装**
+6. **コンポーネント実装**
 
    - ファイル構造を生成
    - Figma のデザイン仕様に基づいて実装
@@ -57,37 +66,29 @@ auto_execution_mode: 1
    - 必要な props と variants を実装
    - 実装をコミット
 
-6. **開発サーバー起動と初期確認**
+7. **開発サーバー起動と初期確認**
 
    - npm run dev を実行
    - localhost:3000 で表示確認
    - 基本的な動作を検証
 
-7. **Playwright MCP でビジュアル検証**
+8. **Playwright MCP でビジュアル検証**
 
    - 実装したコンポーネントのスクリーンショット取得
    - Figma からエクスポートした画像と比較
    - 差分検出と一致率を報告
    - レスポンシブ各サイズで検証
 
-8. **ビジュアル検証結果に基づく修正**
+9. **ビジュアル検証結果に基づく修正**
 
    - 検出された差分を修正
    - 再度ビジュアル検証を実行
    - 修正内容をコミット
 
-9. **テスト作成と実行**
-
-   - 基本的なテストを作成
-   - npm run test を実行
-   - npm run lint を実行
-   - npm run type-check を実行
-   - テストファイルをコミット
-
 10. **ブランチをプッシュ**
 
-    - 作成したブランチをリモートにプッシュ
-    - git push origin [branch-name]
+- 作成したブランチをリモートにプッシュ
+- git push origin [branch-name]
 
 11. **PR 作成**
 
