@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Twitter, Youtube, Instagram, Facebook } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface FooterLink {
@@ -77,42 +78,52 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Logo and Social Section */}
           <div className="w-[262px] flex flex-col gap-6">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="inline-block">
               <Image
                 src="/figma-logo.svg"
                 alt="Figma Logo"
-                width={32}
-                height={32}
-                className="mr-2"
+                width={24}
+                height={35}
               />
-              <span className="text-lg font-semibold">Figma</span>
             </Link>
             
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <Link
-                href="#"
-                className="text-sm text-[#757575] hover:text-[#1E1E1E] transition-colors"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1E1E1E] hover:text-[#757575] transition-colors"
+                aria-label="Twitter"
               >
-                Twitter
+                <Twitter size={24} />
               </Link>
               <Link
-                href="#"
-                className="text-sm text-[#757575] hover:text-[#1E1E1E] transition-colors"
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1E1E1E] hover:text-[#757575] transition-colors"
+                aria-label="YouTube"
               >
-                YouTube
+                <Youtube size={24} />
               </Link>
               <Link
-                href="#"
-                className="text-sm text-[#757575] hover:text-[#1E1E1E] transition-colors"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1E1E1E] hover:text-[#757575] transition-colors"
+                aria-label="Instagram"
               >
-                Instagram
+                <Instagram size={24} />
               </Link>
               <Link
-                href="#"
-                className="text-sm text-[#757575] hover:text-[#1E1E1E] transition-colors"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1E1E1E] hover:text-[#757575] transition-colors"
+                aria-label="Facebook"
               >
-                Facebook
+                <Facebook size={24} />
               </Link>
             </div>
             
