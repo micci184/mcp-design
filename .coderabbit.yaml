@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "ja-JP"
+tone_instructions: |
+  口調は丁寧かつ簡潔に。専門用語は補足説明を添えてください。
+
+early_access: true  # 最新機能を利用
+
+reviews:
+  high_level_summary: true
+  poem: false
+  review_status: true  # レビューステータスを表示
+  collapse_walkthrough: false  # ウォークスルーを展開表示
+
+  # パス固有の指示
+  path_instructions:
+    - path: "**/*.tsx"
+      instructions: |
+        - React Hook のルール違反をチェック
+        - アクセシビリティの問題を指摘
+        - パフォーマンス最適化の提案（メモ化、遅延ロード等）
+
+    - path: "**/api/**"
+      instructions: |
+        - エラーハンドリングの確認
+        - セキュリティの観点からのレビュー
+        - レスポンスの型安全性を確認
+
+    # - path: "**/*.test.{ts,tsx}"
+    #   instructions: |
+    #     - テストケースの網羅性を確認
+    #     - エッジケースの考慮
+
+    - path: "**/components/**"
+      instructions: |
+        - コンポーネントの再利用性
+        - propsの型定義の適切性
+
+chat:
+  auto_reply: true  # 質問への自動応答
+
+# ツール固有の設定
+tools:
+  eslint:
+    enabled: true
