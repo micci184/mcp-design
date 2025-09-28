@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Header } from '@/components/header/Header';
 import { HeroSection } from '@/components/hero/HeroSection';
 import { PricingSection } from '@/components/pricing-section/PricingSection';
+import { FAQSection } from '@/components/accordion/FAQSection';
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
       />
       
       <PricingSection />
+      
+      <FAQSection />
       
       <main className="max-w-[1200px] mx-auto px-8 py-12">
         <h2 className="text-2xl font-bold mb-8 text-center">Component Library</h2>
@@ -62,6 +65,14 @@ export default function Home() {
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-semibold mb-2">Pricing Section</h3>
               <p className="text-gray-600">Complete pricing section with toggle and cards</p>
+            </div>
+          </Link>
+          
+          {/* Accordion / FAQ */}
+          <Link href="/accordion-test" className="block">
+            <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold mb-2">Accordion / FAQ</h3>
+              <p className="text-gray-600">Expandable FAQ items with open/closed states</p>
             </div>
           </Link>
         </div>
