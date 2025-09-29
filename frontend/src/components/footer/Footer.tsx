@@ -63,8 +63,6 @@ export const Footer: React.FC<FooterProps> = ({
   sections = defaultSections,
   className,
 }) => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer
       className={cn(
@@ -81,8 +79,9 @@ export const Footer: React.FC<FooterProps> = ({
               <Image
                 src="/figma-logo.svg"
                 alt="Figma Logo"
-                width={24}
-                height={35}
+                width={35}
+                height={52}
+                className="w-[35px] h-[52px]"
               />
             </Link>
             
@@ -145,11 +144,6 @@ export const Footer: React.FC<FooterProps> = ({
                 />
               </Link>
             </div>
-            
-            {/* Copyright */}
-            <p className="text-sm text-[#757575] mt-auto">
-              © {currentYear} Figma, Inc.
-            </p>
           </div>
 
           {/* Link Sections */}
